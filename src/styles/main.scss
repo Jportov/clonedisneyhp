@@ -1,4 +1,51 @@
-$bgColor:rgb(33, 57, 109);
-    body { background-color: $bgColor;
+@use 'hero';
 
-    }
+
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;  
+}
+
+$corDeFundo: #040714;
+$corTextoPrincipal: silver;
+$corTextoSecundaria: #f9f9f9;
+
+body {
+    background-color: $corDeFundo;
+}
+@mixin text($fontSize: 16px) {
+    font-size: $fontSize;
+    line-height: $fontSize + 10px;
+    color: $corTextoPrincipal
+}
+@mixin title($fontSize: 28px) {
+    @include text($fontSize);
+    color: $corTextoSecundaria
+}
+.text--big {
+    @include text(18px);
+}
+.text {
+    @include text;
+}
+.text--small {
+    @include text(12px)
+}
+.title--big {
+    @include title(44px)
+}
+.title {
+    @include title;
+}
+.title--small {
+    @include title(28px)
+}
+
+.link-text{
+    @include text(18px);
+    color: $corTextoSecundaria;
+    text-decoration: underline;
+}
