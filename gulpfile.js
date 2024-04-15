@@ -12,12 +12,12 @@ function styles(){
 
 
 function images(){
-    return gulp.src('./src/images/**/*.scss')
+    return gulp.src('./src/images/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/images'));
 };
 
 exports.default = gulp.parallel(styles, images);
 exports.watch = function() {
-    gulp.watch('./src/styles/*.scss', gulp.parallel(styles, images))
+    gulp.watch('./src/styles/*.scss', gulp.parallel(styles))
 }
