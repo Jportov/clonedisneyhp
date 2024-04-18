@@ -6,9 +6,15 @@
         margin-bottom: 24px;
     }
 
-    &__list {display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+
+        @media (max-width:768px) {
+            grid-template-columns: 1fr 1fr;
+            
+        }
 
         &__item {
             text-align: center;

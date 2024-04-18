@@ -30,7 +30,10 @@
 body {
     background-color: variaveis.$corDeFundo;
     
-    
+    @media (max-width:768px) {
+        overflow-x: hidden; 
+        
+    }
 }
 @mixin text($fontSize: 16px) {
     font-size: $fontSize;
@@ -43,21 +46,50 @@ body {
 }
 .text--big {
     @include text(18px);
+    @media (max-width:768px) {
+        @include text(15px);
+        
+    }
 }
 .text {
     @include text;
+
+    @media (max-width:768px) {
+        @include text(14px);        
+    }
 }
 .text--small {
-    @include text(12px)
+    @include text(12px);
+
+    @media (max-width:768px) {
+        @include text(11px);
+        
+    }
 }
 .title--big {
-    @include title(44px)
+    @include title(44px);
+
+    @media (max-width:768px) {
+        @include title(26px);
+        
+    }
 }
 .title {
     @include title;
+    
+
+    @media (max-width:768px) {
+        @include title(24px);
+        
+    }
 }
 .title--small {
-    @include title(28px)
+    @include title(28px);
+
+    @media (max-width:768px) {
+        @include title(22px);
+        
+    }
 }
 
 .link-text{
@@ -111,6 +143,12 @@ body {
                     align-items: center;
                     position: relative;
                     margin-bottom: 84px;
+
+
+                    @media (max-width:768px) {
+                        display: block;
+                        
+                    }
                     
 
                         img {
@@ -139,6 +177,13 @@ body {
                                 flex-direction: column;
                                 justify-content: center;
                                 align-items: self-start;
+
+                                @media (max-width:768px) {
+                                    position: relative;
+                                    left: 0;
+                                    width: 100%;
+                                    
+                                }
                             }
                         }
                 }
