@@ -3,6 +3,8 @@
 
 .shows {
     padding: 2vw 5.6vw;
+    min-height: 60vw;
+    
     &__list {
         margin-top: 44px;
         display: none;
@@ -17,6 +19,7 @@
                 padding-top: 2vw;
                 max-width: 100%;
                 border-radius: 4px;
+                width: 100%;
 
             }
         }
@@ -33,9 +36,12 @@
             background: none;
             text-transform: uppercase;
             margin: 0 1vw;
+            border-bottom: 5px solid transparent;
+            cursor: pointer;
+            
             
             &--is-active {
-                border-bottom: 5px solid variaveis.$corTextoSecundaria;
+                border-color: variaveis.$corTextoSecundaria;
             }
         }
     }
