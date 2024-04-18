@@ -5,6 +5,7 @@
 @use'available-devices';
 @use'faq';
 @use'footer';
+@use'header';
 
 @font-face {
     font-family: Avenir;
@@ -23,6 +24,7 @@
     padding: 0;
     box-sizing: border-box; 
     font-family: Avenir, sans-serif; 
+    list-style: none;
 }
 
 body {
@@ -65,18 +67,41 @@ body {
     display: block;
 }
 .button {
-                    display: block;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     width: 100%;
                     height: 60px;
                     font-size: 18px;
                     color: variaveis.$corTextoSecundaria;
-                    background-color: #6421ff;
+                    background-color: variaveis.$corBotaoFundo;
                     text-transform: uppercase;
                     border-radius: 4px;
-                    margin-top: 2vw;
-                    margin-bottom: 8px;
                     cursor: pointer;
-                    
+                    text-decoration: none;
+                    padding: 8px 14px;
+                    letter-spacing: 1px;
+                    border: 1px solid variaveis.$corBotaoFundo;
+                    &:hover {
+                        background-color:lighten(variaveis.$corBotaoFundo, 3%);  
+                    }
+
+                &--secondary {
+                    background-color: variaveis.$corBotaoFundSecundario;
+                    border-color: variaveis.$corBotaoFundSecundario;
+
+                    &:hover {
+                        background-color:lighten(variaveis.$corBotaoFundSecundario, 3%);  
+                    }
+                }
+                &--dark {
+                    background-color: rgba(variaveis.$corBotaoFundDark, 0.8);
+                    border-color: variaveis.$corTextoSecundaria;
+                    &:hover {
+                        background-color: variaveis.$corTextoSecundaria; 
+                        color: variaveis.$corDeFundo;
+                    }
+                }
                 }
 
                 .image-text-section {
